@@ -1,7 +1,7 @@
 package org.example.controller;
 
 import org.example.dto.StudentDto;
-import org.example.service.StudentServiceImpl;
+import org.example.service.impl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
