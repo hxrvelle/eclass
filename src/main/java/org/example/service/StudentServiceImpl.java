@@ -7,7 +7,8 @@ import org.example.repository.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
+import javax.transaction.Transactional;
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,22 +24,43 @@ public class StudentServiceImpl {
     }
 
     public List<StudentDto> getAllStudents() {
-        List<Student> students = repo.findAll();
+        List<Student> students = repo.findStudentsWithPhoneNumbers();
         return students.stream().map(mapper::mapToDto).toList();
     }
 
     public StudentDto getStudentById(int id) {
-        Optional<Student> student = repo.findById(id);
-        return student.map(value -> mapper.mapToDto(value)).orElse(null);
+        Student student = repo.findStudentWithPhoneNumbers(id);
+        return mapper.mapToDto(student);
     }
 
-    public void createStudent(StudentDto studentDto) {
-        Student student = mapper.mapToEntity(studentDto);
-        repo.saveAndFlush(student);
+    @Transactional
+    public void createStudent(String surname, String name, String group, Date date) {
+        Student student = new Student();
+        student.setSurname(surname);
+        student.setName(name);
+        student.setGroup(group);
+        student.setDate(date);
+        student.setStatus(1);
+
+        repo.save(student);
     }
 
-    public void updateStudent(int id, StudentDto studentDto) {
-        Optional<Student> student = repo.findById(id);
-        student.ifPresent(value -> repo.save(value));
+    @Transactional
+    public void updateStudent(int id, String surname, String name, String group, Date date) {
+        Optional<Student> existingStudent = repo.findById(id);
+
+        Student student = existingStudent.get();
+        student.setSurname(surname);
+        student.setName(name);
+        student.setGroup(group);
+        student.setDate(date);
+        student.setStatus(1);
+
+        repo.save(student);
+    }
+
+    @Transactional
+    public void deleteStudent(int id) {
+        repo.deleteById(id);
     }
 }

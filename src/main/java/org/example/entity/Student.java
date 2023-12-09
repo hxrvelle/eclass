@@ -1,7 +1,10 @@
 package org.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -15,12 +18,15 @@ public class Student {
     private String surname;
     @Column(name = "name")
     private String name;
-    @Column(name = "group")
+    @Column(name = "stream_group")
     private String group;
     @Column(name = "date")
     private Date date;
     @Column(name = "status")
     private int status;
+    @JsonIgnoreProperties("student")
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Phone> phoneNumbers;
 
     public Student() {
     }
@@ -82,6 +88,14 @@ public class Student {
         this.status = status;
     }
 
+    public List<Phone> getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public void setPhoneNumbers(List<Phone> phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -94,7 +108,8 @@ public class Student {
         if (!Objects.equals(surname, student.surname)) return false;
         if (!Objects.equals(name, student.name)) return false;
         if (!Objects.equals(group, student.group)) return false;
-        return Objects.equals(date, student.date);
+        if (!Objects.equals(date, student.date)) return false;
+        return Objects.equals(phoneNumbers, student.phoneNumbers);
     }
 
     @Override
@@ -105,6 +120,7 @@ public class Student {
         result = 31 * result + (group != null ? group.hashCode() : 0);
         result = 31 * result + (date != null ? date.hashCode() : 0);
         result = 31 * result + status;
+        result = 31 * result + (phoneNumbers != null ? phoneNumbers.hashCode() : 0);
         return result;
     }
 
@@ -117,6 +133,7 @@ public class Student {
                 ", group='" + group + '\'' +
                 ", date=" + date +
                 ", status=" + status +
+                ", phoneNumbers=" + phoneNumbers +
                 '}';
     }
 }

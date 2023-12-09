@@ -1,6 +1,7 @@
 package org.example.dto;
 
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class StudentDto {
@@ -10,17 +11,19 @@ public class StudentDto {
     private String group;
     private Date date;
     private int status;
+    private List<PhoneDto> phoneNumbers;
 
     public StudentDto() {
     }
 
-    public StudentDto(int id, String surname, String name, String group, Date date, int status) {
+    public StudentDto(int id, String surname, String name, String group, Date date, int status, List<PhoneDto> phoneNumbers) {
         this.id = id;
         this.surname = surname;
         this.name = name;
         this.group = group;
         this.date = date;
         this.status = status;
+        this.phoneNumbers = phoneNumbers;
     }
 
     public int getId() {
@@ -71,6 +74,14 @@ public class StudentDto {
         this.status = status;
     }
 
+    public List<PhoneDto> getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public void setPhoneNumbers(List<PhoneDto> phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -83,7 +94,8 @@ public class StudentDto {
         if (!Objects.equals(surname, that.surname)) return false;
         if (!Objects.equals(name, that.name)) return false;
         if (!Objects.equals(group, that.group)) return false;
-        return Objects.equals(date, that.date);
+        if (!Objects.equals(date, that.date)) return false;
+        return Objects.equals(phoneNumbers, that.phoneNumbers);
     }
 
     @Override
@@ -94,6 +106,7 @@ public class StudentDto {
         result = 31 * result + (group != null ? group.hashCode() : 0);
         result = 31 * result + (date != null ? date.hashCode() : 0);
         result = 31 * result + status;
+        result = 31 * result + (phoneNumbers != null ? phoneNumbers.hashCode() : 0);
         return result;
     }
 
@@ -106,6 +119,7 @@ public class StudentDto {
                 ", group='" + group + '\'' +
                 ", date=" + date +
                 ", status=" + status +
+                ", phoneNumbers=" + phoneNumbers +
                 '}';
     }
 }
