@@ -1,26 +1,21 @@
 package org.example.dto;
 
-import org.example.entity.EClass;
-
-import javax.persistence.*;
-import java.sql.Date;
-import java.util.HashSet;
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
-import java.util.Set;
 
-public class StudentDto {
+public class EClassDto {
     private int id;
     private String name;
-    private List<EClassDto> classes;
 
-    public StudentDto() {
+    public EClassDto() {
     }
 
-    public StudentDto(int id, String name, List<EClassDto> classes) {
+    public EClassDto(int id, String name) {
         this.id = id;
         this.name = name;
-        this.classes = classes;
     }
 
     public int getId() {
@@ -39,40 +34,29 @@ public class StudentDto {
         this.name = name;
     }
 
-    public List<EClassDto> getClasses() {
-        return classes;
-    }
-
-    public void setClasses(List<EClassDto> classes) {
-        this.classes = classes;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        StudentDto that = (StudentDto) o;
+        EClassDto eClassDto = (EClassDto) o;
 
-        if (id != that.id) return false;
-        if (!Objects.equals(name, that.name)) return false;
-        return Objects.equals(classes, that.classes);
+        if (id != eClassDto.id) return false;
+        return Objects.equals(name, eClassDto.name);
     }
 
     @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (classes != null ? classes.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        return "StudentDto{" +
+        return "EClassDto{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", classes=" + classes +
                 '}';
     }
 }

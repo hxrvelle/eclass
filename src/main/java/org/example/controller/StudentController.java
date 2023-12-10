@@ -21,9 +21,9 @@ public class StudentController {
     }
 
     @GetMapping
-    public ResponseEntity<List<StudentDto>> getAllStudents() {
-        List<StudentDto> studentDtos = service.getAllStudents();
-        return ResponseEntity.status(HttpStatus.OK).body(studentDtos);
+    public ResponseEntity<List<StudentDto>> getStudents() {
+        List<StudentDto> students = service.getAllStudents();
+        return ResponseEntity.status(HttpStatus.OK).body(students);
     }
 
     @GetMapping("/{id}")
@@ -34,29 +34,18 @@ public class StudentController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createStudent(
-            @RequestParam String surname,
-            @RequestParam String name,
-            @RequestParam String group,
-            @RequestParam Date date
-            ) {
-        service.createStudent(surname, name, group, date);
+    public void createStudent(@RequestParam int id, @RequestParam String name) {
+        service.createStudent(id, name);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void updateStudent(
-            @PathVariable int id,
-            @RequestParam String surname,
-            @RequestParam String name,
-            @RequestParam String group,
-            @RequestParam Date date
-    ) {
-        service.updateStudent(id, surname, name, group, date);
+    public void updateStudent(@PathVariable int id, @RequestParam String name) {
+        service.updateStudent(id, name);
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteStudent(@PathVariable int id) {
         service.deleteStudent(id);
     }

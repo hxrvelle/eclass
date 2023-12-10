@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class StudentServiceImpl implements StudentService {
     private StudentRepo repo;
     private StudentMapper mapper;
@@ -26,46 +27,36 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<StudentDto> getAllStudents() {
-        List<Student> students = repo.findStudentsWithPhoneNumbers();
+        List<Student> students = repo.findAll();
         return students.stream().map(mapper::mapToDto).toList();
     }
 
     @Override
     public StudentDto getStudentById(int id) {
-        Student student = repo.findStudentWithPhoneNumbers(id);
-        return mapper.mapToDto(student);
+        Optional<Student> student = repo.findWithClassesById(id);
+        return mapper.mapToDto(student.get());
     }
 
     @Override
-    @Transactional
-    public void createStudent(String surname, String name, String group, Date date) {
+    public void createStudent(int id, String name) {
         Student student = new Student();
-        student.setSurname(surname);
+        student.setId(id);
         student.setName(name);
-        student.setGroup(group);
-        student.setDate(date);
-        student.setStatus(1);
-
         repo.save(student);
     }
 
     @Override
-    @Transactional
-    public void updateStudent(int id, String surname, String name, String group, Date date) {
+    public void updateStudent(int id, String name) {
         Optional<Student> existingStudent = repo.findById(id);
 
         Student student = existingStudent.get();
-        student.setSurname(surname);
+        student.setId(id);
         student.setName(name);
-        student.setGroup(group);
-        student.setDate(date);
-        student.setStatus(1);
 
         repo.save(student);
     }
 
     @Override
-    @Transactional
     public void deleteStudent(int id) {
         repo.deleteById(id);
     }

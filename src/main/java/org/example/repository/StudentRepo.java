@@ -1,18 +1,21 @@
 package org.example.repository;
 
 import org.example.entity.Student;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Entity;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface StudentRepo extends JpaRepository<Student, Integer> {
-    @Query("SELECT s FROM Student s LEFT JOIN FETCH s.phoneNumbers WHERE s.id = :studentId")
-    Student findStudentWithPhoneNumbers(@Param("studentId") int studentId);
+    @EntityGraph(attributePaths = "classes")
+    Optional<Student> findWithClassesById(int id);
 
-    @Query("SELECT s FROM Student s LEFT JOIN FETCH s.phoneNumbers p WHERE s.status = 1")
-    List<Student> findStudentsWithPhoneNumbers();
+    @EntityGraph(attributePaths = "classes")
+    List<Student> findAll();
 }
