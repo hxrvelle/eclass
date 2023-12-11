@@ -6,7 +6,6 @@ import org.example.entity.Student;
 import org.example.repository.DisciplineRepo;
 import org.example.repository.EClassRepo;
 import org.example.repository.StudentRepo;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,8 +16,6 @@ import repository.configuration.TestConfig;
 
 import javax.transaction.Transactional;
 import java.util.*;
-
-import static org.junit.Assert.assertFalse;
 
 @SpringJUnitConfig(TestConfig.class)
 @ExtendWith(MySQLContainerProperties.class)
