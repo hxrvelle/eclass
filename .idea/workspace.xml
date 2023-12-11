@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3940d595-27be-4db3-baf0-0731ec9d5db1" name="Changes" comment="-discipline done">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/migration/tables.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/ECLassRepoTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/configuration/MySQLContainerProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/configuration/TestConfig.java" afterDir="false" />
+    <list default="true" id="3940d595-27be-4db3-baf0-0731ec9d5db1" name="Changes" comment="-EClassController tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/repository/DisciplineRepoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/repository/StudentRepoTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/EClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/EClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repository/ECLassRepoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/ECLassRepoTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +78,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources/migration" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ECLassRepoTests.deleteClass_Test">
-    <configuration name="ECLassRepoTests.createClass_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DisciplineRepoTests.deleteDiscipline_Test">
+    <configuration name="DisciplineRepoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
@@ -91,14 +88,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.ECLassRepoTests" />
-      <option name="METHOD_NAME" value="createClass_Test" />
+      <option name="MAIN_CLASS_NAME" value="repository.DisciplineRepoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DisciplineRepoTests.createDiscipline_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eclass_spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.DisciplineRepoTests" />
+      <option name="METHOD_NAME" value="createDiscipline_Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ECLassRepoTests.deleteClass_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DisciplineRepoTests.deleteDiscipline_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
@@ -107,14 +119,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.ECLassRepoTests" />
-      <option name="METHOD_NAME" value="deleteClass_Test" />
+      <option name="MAIN_CLASS_NAME" value="repository.DisciplineRepoTests" />
+      <option name="METHOD_NAME" value="deleteDiscipline_Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ECLassRepoTests.findAllWithStudentAndDisciplinesById_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DisciplineRepoTests.updateDiscipline_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
@@ -123,14 +135,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.ECLassRepoTests" />
-      <option name="METHOD_NAME" value="findAllWithStudentAndDisciplinesById_Test" />
+      <option name="MAIN_CLASS_NAME" value="repository.DisciplineRepoTests" />
+      <option name="METHOD_NAME" value="updateDiscipline_Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ECLassRepoTests.findWithStudentAndDisciplinesById_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentRepoTests.deleteStudent_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
@@ -139,24 +151,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.ECLassRepoTests" />
-      <option name="METHOD_NAME" value="findWithStudentAndDisciplinesById_test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ECLassRepoTests.updateClass_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="eclass_spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.ECLassRepoTests" />
-      <option name="METHOD_NAME" value="updateClass_Test" />
+      <option name="MAIN_CLASS_NAME" value="repository.StudentRepoTests" />
+      <option name="METHOD_NAME" value="deleteStudent_Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -253,11 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ECLassRepoTests.deleteClass_Test" />
-        <item itemvalue="JUnit.ECLassRepoTests.updateClass_Test" />
-        <item itemvalue="JUnit.ECLassRepoTests.createClass_Test" />
-        <item itemvalue="JUnit.ECLassRepoTests.findAllWithStudentAndDisciplinesById_Test" />
-        <item itemvalue="JUnit.ECLassRepoTests.findWithStudentAndDisciplinesById_test" />
+        <item itemvalue="JUnit.DisciplineRepoTests.deleteDiscipline_Test" />
+        <item itemvalue="JUnit.DisciplineRepoTests.updateDiscipline_Test" />
+        <item itemvalue="JUnit.DisciplineRepoTests.createDiscipline_Test" />
+        <item itemvalue="JUnit.DisciplineRepoTests" />
+        <item itemvalue="JUnit.StudentRepoTests.deleteStudent_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +282,10 @@
       <option name="presentableId" value="Default" />
       <updated>1702210761855</updated>
       <workItem from="1702210763068" duration="12439000" />
-      <workItem from="1702235701252" duration="16721000" />
+      <workItem from="1702235701252" duration="16767000" />
+      <workItem from="1702287740665" duration="130000" />
+      <workItem from="1702299745857" duration="1369000" />
+      <workItem from="1702323322763" duration="1046000" />
     </task>
     <task id="LOCAL-00003" summary="-class done">
       <option name="closed" value="true" />
@@ -312,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702255120966</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-EClassController tests">
+      <option name="closed" value="true" />
+      <created>1702283835944</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702283835944</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +329,8 @@
     <MESSAGE value="-push" />
     <MESSAGE value="-class done" />
     <MESSAGE value="-discipline done" />
-    <option name="LAST_COMMIT_MESSAGE" value="-discipline done" />
+    <MESSAGE value="-EClassController tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="-EClassController tests" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

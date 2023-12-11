@@ -2,6 +2,7 @@ package repository;
 
 import org.example.entity.Discipline;
 import org.example.repository.DisciplineRepo;
+import org.example.repository.EClassRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,6 +21,8 @@ import java.util.Optional;
 public class DisciplineRepoTests {
     @Autowired
     private DisciplineRepo repo;
+    @Autowired
+    private EClassRepo eClassRepo;
 
     @Test
     void getDisciplineById_Test() {
@@ -67,6 +70,8 @@ public class DisciplineRepoTests {
 
     @Test
     void deleteDiscipline_Test() {
-
+        eClassRepo.deleteById(1);
+        repo.deleteById(1);
+        Assertions.assertFalse(repo.existsById(1));
     }
 }
