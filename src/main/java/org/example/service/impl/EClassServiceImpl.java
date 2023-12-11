@@ -1,7 +1,6 @@
 package org.example.service.impl;
 
 import org.example.dto.EClassDto;
-import org.example.dto.StudentDto;
 import org.example.entity.Discipline;
 import org.example.entity.EClass;
 import org.example.entity.Student;
@@ -9,6 +8,7 @@ import org.example.mapper.EClassMapper;
 import org.example.repository.DisciplineRepo;
 import org.example.repository.EClassRepo;
 import org.example.repository.StudentRepo;
+import org.example.service.EClassService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +17,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.logging.Logger;
-
-import static org.hibernate.tool.schema.SchemaToolingLogging.LOGGER;
 
 @Service
 @Transactional
-public class EClassServiceImpl {
+public class EClassServiceImpl implements EClassService {
     private EClassRepo repo;
     private StudentRepo studentRepo;
     private DisciplineRepo disciplineRepo;
@@ -37,16 +34,19 @@ public class EClassServiceImpl {
         this.mapper = mapper;
     }
 
+    @Override
     public List<EClassDto> getAllClasses() {
         List<EClass> eClasses = repo.findAll();
         return eClasses.stream().map(mapper::mapToDto).toList();
     }
 
+    @Override
     public EClassDto getEClassById(int id) {
         Optional<EClass> eClass = repo.findWithStudentAndDisciplinesById(id);
         return mapper.mapToDto(eClass.get());
     }
 
+    @Override
     public void createClass(String name, int studentId, int disciplineId) {
         Optional<Student> student = studentRepo.findWithClassesById(studentId);
         Optional<Discipline> discipline = disciplineRepo.findById(disciplineId);
@@ -61,6 +61,7 @@ public class EClassServiceImpl {
         repo.save(eClass);
     }
 
+    @Override
     public void updateClass(int id, String name, int studentId, int disciplineId) {
         Optional<EClass> existingEClass = repo.findWithStudentAndDisciplinesById(id);
 
@@ -78,6 +79,7 @@ public class EClassServiceImpl {
         repo.save(eClass);
     }
 
+    @Override
     public void deleteClass(int id) {
         repo.deleteById(id);
     }
