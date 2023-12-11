@@ -1,7 +1,7 @@
 package org.example.controller;
 
 import org.example.entity.dto.EClassDto;
-import org.example.service.impl.EClassServiceImpl;
+import org.example.service.EClassService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,12 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/classes")
 public class EClassController {
-    private EClassServiceImpl service;
-
     @Autowired
-    public EClassController(EClassServiceImpl service) {
-        this.service = service;
-    }
+    private EClassService service;
 
     @GetMapping
     public ResponseEntity<List<EClassDto>> getClasses() {

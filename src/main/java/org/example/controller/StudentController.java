@@ -1,7 +1,7 @@
 package org.example.controller;
 
 import org.example.entity.dto.StudentDto;
-import org.example.service.impl.StudentServiceImpl;
+import org.example.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,12 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-    private StudentServiceImpl service;
-
     @Autowired
-    public StudentController(StudentServiceImpl service) {
-        this.service = service;
-    }
+    private StudentService service;
 
     @GetMapping
     public ResponseEntity<List<StudentDto>> getStudents() {
