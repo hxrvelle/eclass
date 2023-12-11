@@ -1,13 +1,12 @@
 package org.example.controller;
 
-import org.example.dto.StudentDto;
+import org.example.entity.dto.StudentDto;
 import org.example.service.impl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Date;
 import java.util.List;
 
 @RestController

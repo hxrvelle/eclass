@@ -1,6 +1,6 @@
-package org.example.mapper;
+package org.example.entity.mapper;
 
-import org.example.dto.EClassDto;
+import org.example.entity.dto.EClassDto;
 import org.example.entity.EClass;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

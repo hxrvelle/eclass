@@ -1,8 +1,7 @@
 package org.example.service;
 
-import org.example.dto.StudentDto;
+import org.example.entity.dto.StudentDto;
 
-import java.sql.Date;
 import java.util.List;
 
 public interface StudentService {

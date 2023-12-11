@@ -1,6 +1,6 @@
-package org.example.mapper;
+package org.example.entity.mapper;
 
-import org.example.dto.DisciplineDto;
+import org.example.entity.dto.DisciplineDto;
 import org.example.entity.Discipline;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

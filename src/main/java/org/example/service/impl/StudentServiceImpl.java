@@ -1,8 +1,8 @@
 package org.example.service.impl;
 
-import org.example.dto.StudentDto;
+import org.example.entity.dto.StudentDto;
 import org.example.entity.Student;
-import org.example.mapper.StudentMapper;
+import org.example.entity.mapper.StudentMapper;
 import org.example.repository.StudentRepo;
 import org.example.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,11 +47,9 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void updateStudent(int id, String name) {
         Optional<Student> existingStudent = repo.findById(id);
-
         Student student = existingStudent.get();
         student.setId(id);
         student.setName(name);
-
         repo.save(student);
     }
 

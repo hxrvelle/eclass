@@ -1,6 +1,6 @@
 package org.example.controller;
 
-import org.example.dto.EClassDto;
+import org.example.entity.dto.EClassDto;
 import org.example.service.impl.EClassServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

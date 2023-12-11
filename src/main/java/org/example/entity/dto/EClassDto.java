@@ -1,14 +1,9 @@
-package org.example.dto;
+package org.example.entity.dto;
 
 import org.example.entity.Discipline;
 import org.example.entity.Student;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 

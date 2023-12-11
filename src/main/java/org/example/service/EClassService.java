@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.dto.EClassDto;
+import org.example.entity.dto.EClassDto;
 
 import java.util.List;
 

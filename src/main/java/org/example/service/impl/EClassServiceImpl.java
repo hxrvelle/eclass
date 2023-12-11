@@ -1,10 +1,10 @@
 package org.example.service.impl;
 
-import org.example.dto.EClassDto;
+import org.example.entity.dto.EClassDto;
 import org.example.entity.Discipline;
 import org.example.entity.EClass;
 import org.example.entity.Student;
-import org.example.mapper.EClassMapper;
+import org.example.entity.mapper.EClassMapper;
 import org.example.repository.DisciplineRepo;
 import org.example.repository.EClassRepo;
 import org.example.repository.StudentRepo;

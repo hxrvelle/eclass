@@ -1,6 +1,6 @@
-package org.example.mapper;
+package org.example.entity.mapper;
 
-import org.example.dto.StudentDto;
+import org.example.entity.dto.StudentDto;
 import org.example.entity.Student;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
