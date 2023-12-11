@@ -13,9 +13,9 @@ import java.util.Optional;
 
 @Repository
 public interface StudentRepo extends JpaRepository<Student, Integer> {
-    @EntityGraph(attributePaths = "classes")
+    @EntityGraph(attributePaths = {"classes", "classes.student", "classes.disciplines"})
     Optional<Student> findWithClassesById(int id);
 
-    @EntityGraph(attributePaths = "classes")
+    @EntityGraph(attributePaths = {"classes", "classes.student", "classes.disciplines"})
     List<Student> findAll();
 }

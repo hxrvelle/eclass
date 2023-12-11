@@ -10,26 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3940d595-27be-4db3-baf0-0731ec9d5db1" name="Changes" comment="-push">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/DisciplineDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/EClassDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Discipline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/EClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/DisciplineMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/EClassMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/DisciplineRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/EClassRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/EClassController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/impl/EClassServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/PhoneDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/StudentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Phone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/EClassDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/EClassDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Discipline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/EClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/EClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapper/PhoneMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/PhoneRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/EClassRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/EClassRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/StudentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/StudentRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,28 +57,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.3337469",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "spring.configuration.checksum": "e04800686eb04da7bdd5859c5fa9c2d2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3337469&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e04800686eb04da7bdd5859c5fa9c2d2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.76" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.76" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
@@ -205,6 +195,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702210761855</updated>
       <workItem from="1702210763068" duration="12439000" />
+      <workItem from="1702235701252" duration="8164000" />
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -215,5 +206,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-push" />
     <option name="LAST_COMMIT_MESSAGE" value="-push" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/impl/EClassServiceImpl.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/impl/EClassServiceImpl.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.example.entity.Student" memberName="name" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

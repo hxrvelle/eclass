@@ -10,7 +10,7 @@ public class Discipline {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column(name = "discipline")
+    @Column(name = "name")
     private String name;
 
     public Discipline() {

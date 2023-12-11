@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,7 +19,7 @@ public class StudentServiceImpl implements StudentService {
     private StudentMapper mapper;
 
     @Autowired
-    private StudentServiceImpl(StudentRepo repo, StudentMapper mapper) {
+    public StudentServiceImpl(StudentRepo repo, StudentMapper mapper) {
         this.repo = repo;
         this.mapper = mapper;
     }

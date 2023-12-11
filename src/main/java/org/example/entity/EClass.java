@@ -1,6 +1,9 @@
 package org.example.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -11,13 +14,14 @@ import java.util.Set;
 @Table(name = "class")
 public class EClass {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
     @Column(name = "name")
     private String name;
     @ManyToOne
     @JoinColumn(name = "student_id", referencedColumnName = "id")
+    @JsonBackReference
     private Student student;
 
     @ManyToMany
@@ -89,15 +93,5 @@ public class EClass {
         result = 31 * result + (student != null ? student.hashCode() : 0);
         result = 31 * result + (disciplines != null ? disciplines.hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "EClass{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", student=" + student +
-                ", disciplines=" + disciplines +
-                '}';
     }
 }

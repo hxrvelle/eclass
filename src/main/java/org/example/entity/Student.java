@@ -1,5 +1,8 @@
 package org.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
@@ -13,6 +16,7 @@ public class Student {
     @Column(name = "name")
     private String name;
     @OneToMany(mappedBy = "student", cascade = {CascadeType.REMOVE})
+    @JsonManagedReference
     private List<EClass> classes;
 
     public Student() {
@@ -66,14 +70,5 @@ public class Student {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (classes != null ? classes.hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", classes=" + classes +
-                '}';
     }
 }
