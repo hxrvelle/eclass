@@ -9,12 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3940d595-27be-4db3-baf0-0731ec9d5db1" name="Changes" comment="-Service tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/DisciplineControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/EClassControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/StudentControllerTests.java" afterDir="false" />
+    <list default="true" id="3940d595-27be-4db3-baf0-0731ec9d5db1" name="Changes" comment="-Controller tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/DisciplineTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/EClassTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/StudentTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/dto/DisciplineDtoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/dto/EClassDtoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/dto/StudentDtoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/mapper/DisciplineMapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/mapper/EClassMapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/mapper/StudentMapperTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/migration" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DisciplineControllerTests">
+  <component name="RunManager" selected="JUnit.StudentMapperTests">
     <configuration name="All tests" type="JUnit" factoryName="JUnit">
       <module name="eclass_spring" />
       <option name="PACKAGE_NAME" value="" />
@@ -90,79 +95,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DisciplineControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EClassDtoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="entity.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.DisciplineControllerTests" />
+      <option name="PACKAGE_NAME" value="entity.dto" />
+      <option name="MAIN_CLASS_NAME" value="entity.dto.EClassDtoTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EClassControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EClassMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="entity.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.EClassControllerTests" />
+      <option name="PACKAGE_NAME" value="entity.mapper" />
+      <option name="MAIN_CLASS_NAME" value="entity.mapper.EClassMapperTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentDtoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="entity.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.StudentControllerTests" />
+      <option name="PACKAGE_NAME" value="entity.dto" />
+      <option name="MAIN_CLASS_NAME" value="entity.dto.StudentDtoTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentControllerTests.getStudentById_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="entity.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.StudentControllerTests" />
-      <option name="METHOD_NAME" value="getStudentById_Test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="entity.mapper" />
+      <option name="MAIN_CLASS_NAME" value="entity.mapper.StudentMapperTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentControllerTests.getStudents_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eclass_spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.StudentControllerTests" />
-      <option name="METHOD_NAME" value="getStudents_Test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="entity" />
+      <option name="MAIN_CLASS_NAME" value="entity.StudentTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -258,20 +261,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All tests" />
-      <item itemvalue="JUnit.DisciplineControllerTests" />
-      <item itemvalue="JUnit.EClassControllerTests" />
-      <item itemvalue="JUnit.StudentControllerTests" />
-      <item itemvalue="JUnit.StudentControllerTests.getStudentById_Test" />
-      <item itemvalue="JUnit.StudentControllerTests.getStudents_Test" />
+      <item itemvalue="JUnit.EClassDtoTests" />
+      <item itemvalue="JUnit.EClassMapperTests" />
+      <item itemvalue="JUnit.StudentDtoTests" />
+      <item itemvalue="JUnit.StudentMapperTests" />
+      <item itemvalue="JUnit.StudentTests" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.76" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DisciplineControllerTests" />
-        <item itemvalue="JUnit.EClassControllerTests" />
-        <item itemvalue="JUnit.StudentControllerTests" />
-        <item itemvalue="JUnit.StudentControllerTests.getStudentById_Test" />
-        <item itemvalue="JUnit.StudentControllerTests.getStudents_Test" />
+        <item itemvalue="JUnit.StudentMapperTests" />
+        <item itemvalue="JUnit.StudentDtoTests" />
+        <item itemvalue="JUnit.StudentTests" />
+        <item itemvalue="JUnit.EClassMapperTests" />
+        <item itemvalue="JUnit.EClassDtoTests" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +307,8 @@
       <workItem from="1702287740665" duration="130000" />
       <workItem from="1702299745857" duration="1369000" />
       <workItem from="1702323322763" duration="1046000" />
-      <workItem from="1702328796964" duration="8371000" />
+      <workItem from="1702328796964" duration="8387000" />
+      <workItem from="1702374610810" duration="1848000" />
     </task>
     <task id="LOCAL-00003" summary="-class done">
       <option name="closed" value="true" />
@@ -354,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702331481441</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="-Controller tests">
+      <option name="closed" value="true" />
+      <created>1702370068030</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702370068030</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +379,8 @@
     <MESSAGE value="-EClassController tests" />
     <MESSAGE value="-Discipline delete test" />
     <MESSAGE value="-Service tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Service tests" />
+    <MESSAGE value="-Controller tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Controller tests" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
